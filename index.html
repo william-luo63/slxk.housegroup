@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>樹林／溪崑我的家｜LINE 社群官網｜建案預約看屋</title>
+  <meta name="description" content="樹林／溪崑我的家 LINE 社群官網－在地交流、建案情報、快速預約看屋。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏡</text></svg>">
+  <style>
+    :root{
+      --bg:#0b0f1a; --card:#12182a; --muted:#7f8ea3; --brand:#5dd4c6; --brand-2:#7aa6ff; --text:#eaf2ff; --line:#1c2337;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(1200px 600px at 10% -10%,rgba(125,159,255,.15),transparent),radial-gradient(1000px 600px at 90% -20%,rgba(93,212,198,.10),transparent),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Helvetica,Arial,"PingFang TC","Microsoft JhengHei",sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,15,26,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    .brand h1{font-size:16px;margin:0;font-weight:700}
+    .menu{display:flex;gap:18px;flex-wrap:wrap}
+    .btn{display:inline-grid;place-items:center;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;font-weight:700;box-shadow:var(--shadow);transition:.2s}
+    .btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+    .btn-outline{background:transparent;color:var(--text);border:1px solid var(--line)}
+
+    .hero{padding:68px 0 40px;}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .headline{font-size:40px;line-height:1.15;margin:0 0 14px;font-weight:900}
+    .sub{color:var(--muted);margin:0 0 22px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+    .badge{padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#c9d6ea}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.0));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero .card{padding:16px}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .kpi .item{padding:14px;border-radius:14px;background:#0f1526;border:1px solid var(--line);text-align:center}
+    .kpi .num{font-size:22px;font-weight:900}
+    .kpi .lab{color:var(--muted);font-size:12px}
+
+    section{padding:56px 0}
+    h2.sec{font-size:26px;margin:0 0 18px;font-weight:900}
+    p.lead{color:#c9d6ea;margin:0 0 22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .tile{padding:18px}
+    .muted{color:var(--muted)}
+
+    .project-list .tile{display:flex;gap:16px}
+    .chip{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:#c9d6ea}
+
+    .form{padding:22px}
+    .form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:block;font-weight:700;margin:10px 0 6px}
+    input,select,textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--line);background:#0d1324;color:var(--text)}
+    textarea{min-height:120px;resize:vertical}
+    .hint{font-size:12px;color:var(--muted)}
+
+    .cta-bar{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px}
+    .cta-bar a{box-shadow:var(--shadow)}
+
+    .faq details{padding:14px 16px;border:1px solid var(--line);border-radius:14px}
+    .faq summary{cursor:pointer;font-weight:700}
+    .faq details+details{margin-top:12px}
+
+    footer{padding:28px 0;border-top:1px solid var(--line);color:#a7b5cc}
+    .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+    .cols ul{margin:0;padding:0;list-style:none}
+    .cols li{margin:8px 0}
+
+    @media(max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .form .row{grid-template-columns:1fr}
+      .cols{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">🏡</div>
+        <h1>樹林／溪崑我的家｜LINE 社群</h1>
+      </div>
+      <nav class="menu">
+        <a href="#about" class="muted">關於社群</a>
+        <a href="#news" class="muted">最新動態</a>
+        <a href="#projects" class="muted">建案導覽</a>
+        <a href="#booking" class="muted">預約看屋</a>
+        <a href="#contact" class="muted">聯絡</a>
+        <a href="#booking" class="btn">立即預約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2 class="headline">在地 LINE 社群 × 建案即時情報<br>一鍵完成 <u>預約看屋</u></h2>
+          <p class="sub">與 3,000+ 社群成員一起掌握樹林／溪崑最新建案、生活機能與成交行情。加入社群、訂閱快報、線上完成預約，服務一次到位。</p>
+          <div class="badges">
+            <span class="badge">LINE 社群</span>
+            <span class="badge">實勘導覽</span>
+            <span class="badge">專屬賞屋通道</span>
+            <span class="badge">一鍵完成預約</span>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+            <a class="btn" href="https://line.me/ti/g/你的社群邀請碼" target="_blank" rel="noopener">加入 LINE 社群</a>
+            <a class="btn btn-outline" href="#booking">我要預約</a>
+          </div>
+          <div class="kpi">
+            <div class="item"><div class="num">3,000+</div><div class="lab">活躍社群成員</div></div>
+            <div class="item"><div class="num">48hr 內</div><div class="lab">快速安排帶看</div></div>
+            <div class="item"><div class="num">100% 免費</div><div class="lab">加入與預約</div></div>
+          </div>
+        </div>
+        <aside class="card">
+          <img alt="社群示意" src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1200&auto=format&fit=crop" style="width:100%;height:auto;border-radius:14px"/>
+          <div class="muted" style="padding:8px 4px 0">圖片僅示意｜以實際建案現場為準</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container grid-3">
+        <div class="card tile">
+          <h2 class="sec">關於社群</h2>
+          <p class="lead">我們不是代銷群發廣告。這裡聚集在地住戶、準買方、建築人與房產研究者，分享真實生活圈資訊與建案觀察。</p>
+          <ul class="muted">
+            <li>實價登錄與成交帶看心得</li>
+            <li>交通建設、學區、機能更新</li>
+            <li>裝修維修與住戶經驗交流</li>
+          </ul>
+          <div style="margin-top:12px"><a class="btn" href="https://line.me/ti/g/你的社群邀請碼" target="_blank">立即加入 LINE</a></div>
+        </div>
+        <div class="card tile">
+          <h3 style="margin:0 0 8px">社群公約</h3>
+          <p class="muted">尊重交流、禁止廣告洗版、保護個資、禁止不實資訊。違者將移除並封鎖。</p>
+          <h3 style="margin:16px 0 8px">服務與資源</h3>
+          <p class="muted">社群專屬快速賞屋通道、建案懶人包、比價清單、區域研究圖表（持續更新）。</p>
+        </div>
+        <div class="card tile">
+          <h3 style="margin:0 0 8px">營運資訊</h3>
+          <p class="muted">服務時間：10:00–19:00｜賞屋依預約排程<br>看屋據點：新北市樹林區／新莊區／土城區（依建案不同）</p>
+          <p class="muted">Email：hello@yourbrand.tw｜LINE 官方：@yourbrand</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news">
+      <div class="container">
+        <h2 class="sec">最新動態</h2>
+        <p class="lead">社群每週精選三則你該知道的區域重點與建案更新。</p>
+        <div class="grid-3">
+          <article class="card tile">
+            <h3 style="margin:0 0 6px">◉ XX 交流道匝道動工，預計 Q4 通車</h3>
+            <p class="muted">通勤動線優化，通車後至台 65 時間縮短估 6–8 分鐘。</p>
+          </article>
+          <article class="card tile">
+            <h3 style="margin:0 0 6px">◉ OO 建案 A 棟釋出高樓稀有 3 房</h3>
+            <p class="muted">高樓層日照視野佳，社群成員享優先賞屋名額。</p>
+          </article>
+          <article class="card tile">
+            <h3 style="margin:0 0 6px">◉ 商圈更新｜X 路段生鮮超市進駐</h3>
+            <p class="muted">預計 12 月試營運，步行生活圈配套再補強。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="sec">建案導覽（社群專屬）</h2>
+        <p class="lead">與專人安排 <b>48 小時內</b> 帶看，支援「建案簡報、區域導覽、交通與學區說明」。</p>
+        <div class="project-list grid-2">
+          <div class="card tile">
+            <img alt="建案示意" src="https://images.unsplash.com/photo-1507045498075-123a09c4a9a8?q=80&w=1200&auto=format&fit=crop" style="width:140px;height:100px;object-fit:cover;border-radius:12px" />
+            <div>
+              <h3 style="margin:0 0 4px">原森 TWIN TOWERS｜接待中心</h3>
+              <p class="muted" style="margin:0 0 8px">格局：2–4 房｜學區＋交通利多｜1:1 平面車位</p>
+              <div class="muted" style="display:flex;gap:8px;flex-wrap:wrap">
+                <span class="chip">實勘導覽</span><span class="chip">快速預約</span><span class="chip">社群優先</span>
+              </div>
+            </div>
+          </div>
+          <div class="card tile">
+            <img alt="建案示意" src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" style="width:140px;height:100px;object-fit:cover;border-radius:12px" />
+            <div>
+              <h3 style="margin:0 0 4px">（範例）祥泓大觀｜接待中心</h3>
+              <p class="muted" style="margin:0 0 8px">格局：2–3 房｜近商圈｜綠覆景觀</p>
+              <div class="muted" style="display:flex;gap:8px;flex-wrap:wrap">
+                <span class="chip">社群精選</span><span class="chip">交通方便</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:16px"><a class="btn" href="#booking">預約看屋</a></div>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM (Netlify Forms) -->
+    <section id="booking">
+      <div class="container card form">
+        <h2 class="sec">建案預約表單</h2>
+        <p class="lead">填寫以下資料，我們將於 <b>48 小時內</b> 與你確認時段。送出即代表同意個資使用說明（僅用於預約聯絡）。</p>
+
+        <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="booking" />
+          <p style="display:none">
+            <label>不要填寫此欄位：<input name="bot-field" /></label>
+          </p>
+
+          <div class="row">
+            <div>
+              <label for="name">姓名 *</label>
+              <input id="name" name="姓名" placeholder="王小明" required />
+            </div>
+            <div>
+              <label for="phone">手機 *</label>
+              <input id="phone" name="手機" placeholder="09xx-xxx-xxx" pattern="^(0|\+886)9\d{2}-?\d{3}-?\d{3}$" required />
+              <div class="hint">格式範例：0912-345-678</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="line">LINE ID</label>
+              <input id="line" name="LINE ID" placeholder="yourlineid" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="Email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="project">預約建案 *</label>
+              <select id="project" name="預約建案" required>
+                <option value="">請選擇</option>
+                <option>原森 TWIN TOWERS</option>
+                <option>祥泓大觀</option>
+                <option>（其他）請於備註說明</option>
+              </select>
+            </div>
+            <div>
+              <label for="people">來客人數</label>
+              <select id="people" name="來客人數">
+                <option>1 人</option><option>2 人</option><option>3 人</option><option>4 人以上</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="date">預約日期 *</label>
+              <input id="date" name="預約日期" type="date" required />
+            </div>
+            <div>
+              <label for="slot">偏好時段 *</label>
+              <select id="slot" name="偏好時段" required>
+                <option value="">請選擇</option>
+                <option>10:00–12:00</option>
+                <option>13:00–15:00</option>
+                <option>15:00–17:00</option>
+                <option>17:00–19:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="budget">預算區間</label>
+              <select id="budget" name="預算區間">
+                <option>尚未評估</option>
+                <option>1,500–2,000 萬</option>
+                <option>2,000–2,500 萬</option>
+                <option>2,500–3,000 萬</option>
+                <option>3,000 萬以上</option>
+              </select>
+            </div>
+            <div>
+              <label>購屋目的</label>
+              <div style="display:flex;gap:14px;flex-wrap:wrap">
+                <label class="muted"><input type="radio" name="購屋目的" value="首購" /> 首購</label>
+                <label class="muted"><input type="radio" name="購屋目的" value="換屋" /> 換屋</label>
+                <label class="muted"><input type="radio" name="購屋目的" value="投資" /> 投資</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label>需要的協助</label>
+              <div style="display:flex;gap:14px;flex-wrap:wrap">
+                <label class="muted"><input type="checkbox" name="需要的協助" value="接駁看屋" /> 接駁看屋</label>
+                <label class="muted"><input type="checkbox" name="需要的協助" value="建案簡報" /> 建案簡報</label>
+                <label class="muted"><input type="checkbox" name="需要的協助" value="周邊機能導覽" /> 周邊機能導覽</label>
+              </div>
+            </div>
+            <div>
+              <label for="notes">備註</label>
+              <textarea id="notes" name="備註" placeholder="想看高樓層三房、需要停車、可配合平日晚上…"></textarea>
+            </div>
+          </div>
+
+          <label style="margin-top:8px" class="muted"><input type="checkbox" required name="同意個資使用" /> 我已閱讀並同意個資使用說明（僅用於預約聯絡，不對外提供）。</label>
+          <div style="margin-top:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <button class="btn" type="submit">送出預約</button>
+            <a class="btn btn-outline" href="https://line.me/ti/g/你的社群邀請碼" target="_blank">LINE 私訊確認</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="sec">常見問題</h2>
+        <details>
+          <summary>表單送出後多久會聯繫？</summary>
+          <p class="muted">營業時間內通常 2–6 小時回覆，最慢不超過 48 小時。若急件，建議送出後同步 LINE 私訊。</p>
+        </details>
+        <details>
+          <summary>不是社群成員也能預約嗎？</summary>
+          <p class="muted">可以，社群成員將享有優先排程與專屬資訊包。建議先加入社群以便同步溝通。</p>
+        </details>
+        <details>
+          <summary>個資會如何使用？</summary>
+          <p class="muted">僅用於聯繫預約與到場身份確認，不對外提供或另作他用。你可隨時要求刪除。</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container cols">
+      <div>
+        <h3 style="margin:0 0 8px">樹林／溪崑我的家｜LINE 社群</h3>
+        <p class="muted">在地交流 × 建案導覽 × 快速預約。本站為社群自辦資訊頁，非代銷廣告。</p>
+      </div>
+      <div>
+        <h4 style="margin:0 0 8px">聯絡</h4>
+        <ul>
+          <li>LINE 官方：<a href="https://line.me/ti/g/你的社群邀請碼" target="_blank">@yourbrand</a></li>
+          <li>Email：<a href="mailto:hello@yourbrand.tw">hello@yourbrand.tw</a></li>
+          <li>接待中心：新北市○○區○○路 123 號</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin:0 0 8px">快速導覽</h4>
+        <ul>
+          <li><a href="#projects">建案導覽</a></li>
+          <li><a href="#booking">預約看屋</a></li>
+          <li><a href="#news">最新動態</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-top:18px;color:#7f8ea3;font-size:12px">© <span id="y"></span> 樹林／溪崑我的家</div>
+  </footer>
+
+  <div class="cta-bar">
+    <a class="btn" href="#booking">📝 預約看屋</a>
+    <a class="btn btn-outline" href="https://line.me/ti/g/你的社群邀請碼" target="_blank">💬 加入 LINE</a>
+  </div>
+
+  <script>
+    // 年份
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // 手機輸入格式化（僅美觀，不影響驗證）
+    const phone = document.getElementById('phone');
+    phone && phone.addEventListener('input', e=>{
+      const v = e.target.value.replace(/\D/g,'').slice(0,10);
+      const m = v.replace(/^(\d{4})(\d{3})(\d{0,3}).*/, (m,a,b,c)=> c? `${a}-${b}-${c}` : `${a}-${b}`);
+      e.target.value = m;
+    });
+  </script>
+
+  <!-- 結構化資料（選填，可協助 SEO） -->
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"樹林／溪崑我的家",
+    "url":"https://你的網域或 Netlify 子網域",
+    "sameAs":["https://line.me/ti/g/你的社群邀請碼"],
+    "logo":"https://你的網域/logo.png"
+  }</script>
+</body>
+</html>
